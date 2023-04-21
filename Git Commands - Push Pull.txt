@@ -1,0 +1,78 @@
+git config --global user.name "w3schools-test"			// put your username in quotes
+git config --global user.email "test@w3schools.com"		// put your email in quotes
+
+mkdir myproject
+cd myproject
+
+git init 
+
+#<Create html and css files in myproject folder>
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello World!</title>
+</head>
+<body>
+
+<h1>Hello world!</h1>
+<p>This is the first file in my new Git Repo.</p>
+
+</body>
+</html>
+
+ls
+
+git status
+
+git add index.html
+
+git status
+
+#create readme file
+# hello-world
+Hello World repository for Git tutorial
+This is an example repository for the Git tutoial on https://www.w3schools.com
+
+This repository is built step by step in the tutorial.
+
+#create css(bluestyle.css)
+body {
+background-color: lightblue;
+}
+
+h1 {
+color: navy;
+margin-left: 20px;
+}
+
+#update index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello World!</title>
+<link rel="stylesheet" href="bluestyle.css">
+</head>
+<body>
+
+<h1>Hello world!</h1>
+<p>This is the first file in my new Git Repo.</p>
+
+</body>
+</html>
+
+git add --all
+
+git status
+
+git commit -m "First release of Hello World!"
+
+git remote add origin <github repo link>				// put the github repo link
+
+git push --set-upstream origin master
+
+git fetch origin
+
+git pull origin
+
+git push origin
